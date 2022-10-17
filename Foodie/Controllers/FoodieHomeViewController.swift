@@ -12,7 +12,7 @@ class FoodieHomeViewController: UIViewController {
     @IBOutlet weak var categoriesCollection: UICollectionView!
     @IBOutlet weak var recipiesCollection: UICollectionView!
     
-    let categories = ["AMERICAN","BRAZILLIAN","BRITISH","CANADIAN","CHINESE","CROATIAN","DUTCH","EGYPTIAN","FRENCH","GREEK","INDIAN","ITALIAN","IRISH","JAMAICAN","JAPANESE","KENYAN","MALAYSIAN","MEXICAN","MOROCCAN","PORTUGUESE","SPANISH","TURKISH"]
+    let categories = ["AMERICAN","BRAZILLIAN","BRITISH","CHINESE","FRENCH","GREEK","INDIAN","ITALIAN","JAMAICAN","JAPANESE","MEXICAN","MOROCCAN","PORTUGUESE","SPANISH","TURKISH"]
     
     var selectedCategory = "AMERICAN"
     

@@ -10,9 +10,9 @@ import Foundation
 struct Recipie: Codable {
     var id: Int
     var name: String
-    var category: String
-    var cusine: String
-    var instructions: String
+    var category: String?
+    var cusine: String?
+    var instructions: String?
     var thumbnail: String
     var youtubeLink: String?
     

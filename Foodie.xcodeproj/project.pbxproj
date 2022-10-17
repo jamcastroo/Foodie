@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		3661318A28F8F2340037D730 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3661318928F8F2340037D730 /* AppDelegate.swift */; };
 		3661318C28F8F2340037D730 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3661318B28F8F2340037D730 /* SceneDelegate.swift */; };
-		3661318E28F8F2340037D730 /* FoodCatalogue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3661318D28F8F2340037D730 /* FoodCatalogue.swift */; };
 		3661319128F8F2340037D730 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3661318F28F8F2340037D730 /* Main.storyboard */; };
 		3661319328F8F2350037D730 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3661319228F8F2350037D730 /* Assets.xcassets */; };
 		3661319628F8F2350037D730 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3661319428F8F2350037D730 /* LaunchScreen.storyboard */; };
@@ -25,7 +24,6 @@
 		3661318628F8F2340037D730 /* Foodie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Foodie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3661318928F8F2340037D730 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3661318B28F8F2340037D730 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3661318D28F8F2340037D730 /* FoodCatalogue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCatalogue.swift; sourceTree = "<group>"; };
 		3661319028F8F2340037D730 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3661319228F8F2350037D730 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3661319528F8F2350037D730 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -92,7 +90,6 @@
 		366131A028F8F3BB0037D730 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				3661318D28F8F2340037D730 /* FoodCatalogue.swift */,
 				3661319D28F8F3900037D730 /* SearchViewController.swift */,
 				366131A328F8F7E80037D730 /* RecipeDetail.swift */,
 				366131A528FCCC270037D730 /* FoodieHomeViewController.swift */,
@@ -203,7 +200,6 @@
 			files = (
 				366131AE28FCDBC70037D730 /* RecipeCollectionViewCell.swift in Sources */,
 				366131A928FCCCD30037D730 /* CategoryCollectionViewCell.swift in Sources */,
-				3661318E28F8F2340037D730 /* FoodCatalogue.swift in Sources */,
 				366131A228F8F3CD0037D730 /* Recipies.swift in Sources */,
 				3661318A28F8F2340037D730 /* AppDelegate.swift in Sources */,
 				366131A628FCCC270037D730 /* FoodieHomeViewController.swift in Sources */,
