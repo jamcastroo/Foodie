@@ -7,12 +7,11 @@
 
 import UIKit
 
-class SearchViewController: UIViewController {
-
+class SearchViewController: UIViewController {  
     @IBOutlet weak var search: UITableView!
     @IBOutlet weak var searching: UISearchBar!
     
-    var meals:[Recipie] = [] {
+    var meals: [Recipie] = [] {
         didSet {
             search.reloadData()
         }
@@ -25,26 +24,24 @@ class SearchViewController: UIViewController {
         title = "Search Meal"
     }
     
-    func configDelegate(){
+    func configDelegate() {
         self.search.delegate = self
         self.search.dataSource = self
         self.searching.delegate = self
     }
     
-    //     MARK: - Navigation
-
     //    Navegação feita pela storyboard usando segues para mostrar o detalhe
-        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            if segue.identifier == "DetailFromSearch" {
-                let destination = segue.destination as! RecipeDetailViewController
-                let id = sender as! String
-                destination.id = id
-            }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "DetailFromSearch" {
+            let destination = segue.destination as! RecipeDetailViewController
+            let id = sender as! String
+            destination.id = id
         }
+    }
     
 }
 
-extension SearchViewController:UITableViewDelegate,UITableViewDataSource{
+extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return meals.count
     }
@@ -61,13 +58,12 @@ extension SearchViewController:UITableViewDelegate,UITableViewDataSource{
     }
 }
 
-extension SearchViewController:UISearchBarDelegate{
-    
+extension SearchViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-
-        if searchText.isEmpty{
+        
+        if searchText.isEmpty {
             meals = []
-        }else{
+        } else {
             Task {
                 meals = await service.getAll(route: .search(meal: searchText))
             }
@@ -78,5 +74,4 @@ extension SearchViewController:UISearchBarDelegate{
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
     }
-    
 }

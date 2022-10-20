@@ -8,11 +8,10 @@
 import UIKit
 
 class FoodieHomeViewController: UIViewController {
-    
     @IBOutlet weak var categoriesCollection: UICollectionView!
     @IBOutlet weak var recipiesCollection: UICollectionView!
     
-    let categories = ["AMERICAN","BRITISH","CHINESE","FRENCH","GREEK","INDIAN","ITALIAN","JAMAICAN","JAPANESE","MEXICAN","MOROCCAN","PORTUGUESE","SPANISH","TURKISH"]
+    let categories = ["AMERICAN", "BRITISH", "CHINESE", "FRENCH", "GREEK", "INDIAN", "ITALIAN", "JAMAICAN", "JAPANESE", "MEXICAN", "MOROCCAN", "PORTUGUESE", "SPANISH", "TURKISH"]
     
     var selectedCategory = "AMERICAN"
     var recipies: [Recipie] = []
@@ -30,8 +29,6 @@ class FoodieHomeViewController: UIViewController {
             recipiesCollection.reloadData()
         }
     }
-    
-//     MARK: - Navigation
 
 //     In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -77,10 +74,10 @@ extension FoodieHomeViewController: UICollectionViewDelegate, UICollectionViewDa
         }
     }
     
-    //Permite o tamanho dinâmico para a segunda collection
+    // Permite o tamanho dinâmico para a segunda collection
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if collectionView == recipiesCollection {
-            return CGSize(width: collectionView.frame.width - 100 , height: collectionView.frame.height - (collectionView.safeAreaInsets.top + collectionView.safeAreaInsets.bottom))
+            return CGSize(width: collectionView.frame.width - 100, height: collectionView.frame.height - (collectionView.safeAreaInsets.top + collectionView.safeAreaInsets.bottom))
         } else {
             return CGSize(width: 150, height: 100)
         }
