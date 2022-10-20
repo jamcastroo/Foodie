@@ -18,6 +18,7 @@
 		366131A628FCCC270037D730 /* FoodieHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366131A528FCCC270037D730 /* FoodieHomeViewController.swift */; };
 		366131A928FCCCD30037D730 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366131A828FCCCD30037D730 /* CategoryCollectionViewCell.swift */; };
 		366131AE28FCDBC70037D730 /* RecipeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366131AD28FCDBC70037D730 /* RecipeCollectionViewCell.swift */; };
+		366131B128FE23A10037D730 /* FreeMealDBService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366131B028FE23A10037D730 /* FreeMealDBService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		366131A528FCCC270037D730 /* FoodieHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodieHomeViewController.swift; sourceTree = "<group>"; };
 		366131A828FCCCD30037D730 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		366131AD28FCDBC70037D730 /* RecipeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCollectionViewCell.swift; sourceTree = "<group>"; };
+		366131B028FE23A10037D730 /* FreeMealDBService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeMealDBService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 		3661318828F8F2340037D730 /* Foodie */ = {
 			isa = PBXGroup;
 			children = (
+				366131AF28FE238D0037D730 /* Services */,
 				366131A728FCCCB90037D730 /* Views */,
 				366131A028F8F3BB0037D730 /* Controllers */,
 				3661319F28F8F3A80037D730 /* Models */,
@@ -104,6 +107,14 @@
 				366131AD28FCDBC70037D730 /* RecipeCollectionViewCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		366131AF28FE238D0037D730 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				366131B028FE23A10037D730 /* FreeMealDBService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,6 +211,7 @@
 			files = (
 				366131AE28FCDBC70037D730 /* RecipeCollectionViewCell.swift in Sources */,
 				366131A928FCCCD30037D730 /* CategoryCollectionViewCell.swift in Sources */,
+				366131B128FE23A10037D730 /* FreeMealDBService.swift in Sources */,
 				366131A228F8F3CD0037D730 /* Recipies.swift in Sources */,
 				3661318A28F8F2340037D730 /* AppDelegate.swift in Sources */,
 				366131A628FCCC270037D730 /* FoodieHomeViewController.swift in Sources */,

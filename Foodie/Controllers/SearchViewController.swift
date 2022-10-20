@@ -12,14 +12,17 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var search: UITableView!
     @IBOutlet weak var searching: UISearchBar!
     
-    var data:[String] = ["AMERICAN","BRAZILLIAN","BRITISH","CHINESE","FRENCH","GREEK","INDIAN","ITALIAN","JAMAICAN","JAPANESE","MEXICAN","MOROCCAN","PORTUGUESE","SPANISH","TURKISH"]
-    var filterUse:[String] = []
+    var meals:[Recipie] = [] {
+        didSet {
+            search.reloadData()
+        }
+    }
+    let service = FreeMealDBService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.filterUse = self.data
         self.configDelegate()
-
+        title = "Search Meal"
     }
     
     func configDelegate(){
@@ -28,37 +31,48 @@ class SearchViewController: UIViewController {
         self.searching.delegate = self
     }
     
+    //     MARK: - Navigation
+
+    //    Navegação feita pela storyboard usando segues para mostrar o detalhe
+        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            if segue.identifier == "DetailFromSearch" {
+                let destination = segue.destination as! RecipeDetailViewController
+                let id = sender as! String
+                destination.id = id
+            }
+        }
+    
 }
 
 extension SearchViewController:UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.filterUse.count
+        return meals.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = self.filterUse[indexPath.row]
+        cell.textLabel?.text = self.meals[indexPath.row].name
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "DetailFromSearch", sender: meals[indexPath.row].id)
+    }
 }
 
 extension SearchViewController:UISearchBarDelegate{
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        self.filterUse = []
-        
+
         if searchText.isEmpty{
-            self.filterUse = self.data
+            meals = []
         }else{
-            for value in data{
-                if value.uppercased().contains(searchText.uppercased()){
-                    self.filterUse.append(value)
-                }
+            Task {
+                meals = await service.getAll(route: .search(meal: searchText))
             }
         }
-        self.search.reloadData()
+        
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {

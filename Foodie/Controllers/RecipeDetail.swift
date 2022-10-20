@@ -15,18 +15,37 @@ class RecipeDetailViewController: UIViewController {
     @IBOutlet weak var recipeCuisineLabel: UILabel!
     @IBOutlet weak var recipeDescriptionTextView: UITextView!
     
-    var recipe: Recipie!
+    var id: String!
+    let service = FreeMealDBService()
+    var recipe: Recipie?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        recipeNameLabel.text = recipe.name
-        recipeCategory.text = recipe.category
-        recipeCuisineLabel.text = recipe.cusine
-        recipeDescriptionTextView.text = recipe.instructions
+        getInformation()
     }
     
-
+    func configureDetails() {
+        recipeNameLabel.text = recipe?.name
+        recipeCategory.text = recipe?.category
+        recipeCuisineLabel.text = recipe?.cusine
+        recipeDescriptionTextView.text = recipe?.instructions
+    }
+    
+    func getInformation() {
+        Task {
+            recipe = await service.getAll(route: .details(id: id)).first
+            if let imagePath = recipe?.thumbnail {
+                let image = await service.getImageFrom(path: imagePath)
+                DispatchQueue.main.async {
+                    self.recipeImage.image = image
+                }
+            }
+            
+            DispatchQueue.main.async {
+                self.configureDetails()
+            }
+        }
+    }
     /*
     // MARK: - Navigation
 
