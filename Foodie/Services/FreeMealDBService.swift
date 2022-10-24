@@ -82,7 +82,7 @@ struct FreeMealDBService {
     }
     
     // A partir da url retornada pela api, criamos nosso proprio path pra salvar no folder de cache, pegando a url através do file manager
-    private func createPath(for file: URL) -> URL? {
+    func createPath(for file: URL) -> URL? {
         let baseFMPath = "/foodie-"
         let id = baseFMPath + file.lastPathComponent
         let folderURL = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first

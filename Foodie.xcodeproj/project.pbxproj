@@ -19,7 +19,19 @@
 		366131A928FCCCD30037D730 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366131A828FCCCD30037D730 /* CategoryCollectionViewCell.swift */; };
 		366131AE28FCDBC70037D730 /* RecipeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366131AD28FCDBC70037D730 /* RecipeCollectionViewCell.swift */; };
 		366131B128FE23A10037D730 /* FreeMealDBService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366131B028FE23A10037D730 /* FreeMealDBService.swift */; };
+		366131B92901719A0037D730 /* FoodieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366131B82901719A0037D730 /* FoodieTests.swift */; };
+		366131C0290173CB0037D730 /* ServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366131BF290173CB0037D730 /* ServiceTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		366131BA2901719A0037D730 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3661317E28F8F2340037D730 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3661318528F8F2340037D730;
+			remoteInfo = Foodie;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		3661318628F8F2340037D730 /* Foodie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Foodie.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -36,10 +48,20 @@
 		366131A828FCCCD30037D730 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		366131AD28FCDBC70037D730 /* RecipeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCollectionViewCell.swift; sourceTree = "<group>"; };
 		366131B028FE23A10037D730 /* FreeMealDBService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeMealDBService.swift; sourceTree = "<group>"; };
+		366131B62901719A0037D730 /* FoodieTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoodieTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		366131B82901719A0037D730 /* FoodieTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodieTests.swift; sourceTree = "<group>"; };
+		366131BF290173CB0037D730 /* ServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		3661318328F8F2340037D730 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		366131B32901719A0037D730 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -53,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				3661318828F8F2340037D730 /* Foodie */,
+				366131B72901719A0037D730 /* FoodieTests */,
 				3661318728F8F2340037D730 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -61,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				3661318628F8F2340037D730 /* Foodie.app */,
+				366131B62901719A0037D730 /* FoodieTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -117,6 +141,15 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		366131B72901719A0037D730 /* FoodieTests */ = {
+			isa = PBXGroup;
+			children = (
+				366131B82901719A0037D730 /* FoodieTests.swift */,
+				366131BF290173CB0037D730 /* ServiceTests.swift */,
+			);
+			path = FoodieTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,6 +171,24 @@
 			productReference = 3661318628F8F2340037D730 /* Foodie.app */;
 			productType = "com.apple.product-type.application";
 		};
+		366131B52901719A0037D730 /* FoodieTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 366131BE2901719A0037D730 /* Build configuration list for PBXNativeTarget "FoodieTests" */;
+			buildPhases = (
+				366131B22901719A0037D730 /* Sources */,
+				366131B32901719A0037D730 /* Frameworks */,
+				366131B42901719A0037D730 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				366131BB2901719A0037D730 /* PBXTargetDependency */,
+			);
+			name = FoodieTests;
+			productName = FoodieTests;
+			productReference = 366131B62901719A0037D730 /* FoodieTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -150,6 +201,10 @@
 				TargetAttributes = {
 					3661318528F8F2340037D730 = {
 						CreatedOnToolsVersion = 13.2.1;
+					};
+					366131B52901719A0037D730 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 3661318528F8F2340037D730;
 					};
 				};
 			};
@@ -167,6 +222,7 @@
 			projectRoot = "";
 			targets = (
 				3661318528F8F2340037D730 /* Foodie */,
+				366131B52901719A0037D730 /* FoodieTests */,
 			);
 		};
 /* End PBXProject section */
@@ -179,6 +235,13 @@
 				3661319628F8F2350037D730 /* LaunchScreen.storyboard in Resources */,
 				3661319328F8F2350037D730 /* Assets.xcassets in Resources */,
 				3661319128F8F2340037D730 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		366131B42901719A0037D730 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,7 +284,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		366131B22901719A0037D730 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				366131B92901719A0037D730 /* FoodieTests.swift in Sources */,
+				366131C0290173CB0037D730 /* ServiceTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		366131BB2901719A0037D730 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3661318528F8F2340037D730 /* Foodie */;
+			targetProxy = 366131BA2901719A0037D730 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		3661318F28F8F2340037D730 /* Main.storyboard */ = {
@@ -415,6 +495,42 @@
 			};
 			name = Release;
 		};
+		366131BC2901719A0037D730 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3C87YN6WQ5;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ADA.FoodieTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Foodie.app/Foodie";
+			};
+			name = Debug;
+		};
+		366131BD2901719A0037D730 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3C87YN6WQ5;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ADA.FoodieTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Foodie.app/Foodie";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -432,6 +548,15 @@
 			buildConfigurations = (
 				3661319B28F8F2350037D730 /* Debug */,
 				3661319C28F8F2350037D730 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		366131BE2901719A0037D730 /* Build configuration list for PBXNativeTarget "FoodieTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				366131BC2901719A0037D730 /* Debug */,
+				366131BD2901719A0037D730 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
